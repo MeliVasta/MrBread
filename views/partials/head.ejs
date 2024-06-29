@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Logo imágen pestaña navegador -->
+    <link rel="shortcut icon" href="../image/LogoMrBread.svg" />
+    <!-- Link a style.css -->
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Great Vibes">
+    <title>Mr. Bread</title>
+</head>
+
+<body>
+    <div class="estilo-footer"> <!-- Estilo para que el footer quede debajo de todo -->
+    <header>
+        <nav>
+            <ul class="barra-nav">
+
+                <li class="user">
+                    <ul class="btns-user">
+                        <% if (user) { %>
+                            <li class="usuario-registrado">
+                                <i class="bi bi-person-circle"></i>
+                                <span>Bienvenido, <%= user %></span>
+                            </li>
+                            <% } else { %>
+                                <li class="btns-reg-log"><a href="/register">Registrarte</a></li>
+                                <li class="btns-reg-log"><a href="/login">Ingresar</a></li>
+                                <% } %>
+                    </ul>
+                </li>
+
+                <li class="btns-nav">
+                    <ul class="btns-pages">
+                        <li class="btn-pages">
+                            <a href="/">INICIO</a>
+                        </li>
+
+                        <li class="btn-pages">
+                            <a href="/#sobre-nosotros">SOBRE NOSOTROS</a>
+                        </li>
+
+                        <li class="btn-pages">
+                            <a href="/productos/all">PRODUCTOS</a>
+                        </li>
+
+                        <li class="btn-pages">
+                            <a href="/contacto">CONTACTO</a>
+                        </li>
+
+                        <li class="btn-pages">
+                            <button>
+                                <a href="/productos/shop"><i class="bi bi-cart4"></i></a>
+                            </button>
+
+                        </li>
+                    </ul>
+                </li>
+
+
+
+                <li class="logo">
+                    <h1>MR. BREAD</h1>
+                    <img src="../image/LogoMrBread.svg" alt="">
+                </li>
+            </ul>
+        </nav>
+    </header>

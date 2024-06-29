@@ -1,0 +1,40 @@
+<%- include ('../partials/headLogReg.ejs') %>
+
+
+    <section class="reg-log-section">
+
+        <form action="/usuarios/usuarioregistrado" class="reg-log-form" method="post">
+
+            <h2 class="titulo-form">REGISTRATE</h2>
+
+            <label for="usuario">USUARIO:</label>
+            <input type="text" name="usuario" id="usuario" placeholder="Ingrese nombre de usuario " required>
+
+            <label for="email">EMAIL:</label>
+            <input type="email" name="email" id="email" placeholder="Ingrese su email" required>
+
+            <label for="contrasena">CONTRASEÑA:</label>
+            <input type="password" name="contrasena" id="contrasena" placeholder="Ingrese una contraseña" required>
+
+            <label for="confirmContrasena">CONFIRMAR CONTRASEÑA:</label>
+            <input type="password" name="confirmContrasena" id="confirmContrasena"
+                placeholder="Vuelva a ingresar la contraseña" required>
+
+
+            <div class="abajo-form-reg-log">
+                <button class="btn-reg-log">REGISTRATE</button>
+                <div class="ini-reg">
+                    <p>¿Ya ténes usuario?</p>
+                    <button>
+                        <a href="/login">Iniciá sesión</a>
+                    </button>
+                </div>
+
+            </div>
+
+        </form>
+    </section>
+
+
+
+    <%- include ('../partials/footer.ejs') %>

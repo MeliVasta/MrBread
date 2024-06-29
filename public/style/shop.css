@@ -1,0 +1,337 @@
+.carrito-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 2%;
+}
+
+/* Lado izquierdo, productos seleccionados */
+
+.shop-producto {
+    width: 65%;
+}
+
+.shop-producto-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Producto seleccionado */
+
+.prod-selec-shop {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 2%;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.664);
+    box-shadow: 2px 2px 10px rgb(132, 132, 132);
+    margin-bottom: 2%;
+    width: 100%;
+}
+
+.prod-selec-shop img {
+    width: 15%;
+    border-radius: 20px;
+}
+
+.nom-dec-eliminar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2%;
+    margin: 2% 1%;
+    padding-left: 1%;
+    width: 55%;
+}
+
+.btn-eliminar {
+    font-size: 150%;
+    cursor: pointer;
+    color: rgb(66, 2, 66);
+    padding-top: 1%;
+}
+
+.controles-productos {
+    width: 25%;
+    padding: 2%;
+}
+
+.ctrl-btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    border: 2px solid var(--color-principal);
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px rgb(186, 185, 185);
+    padding: 10%;
+    gap: 5%;
+}
+
+.btn-control {
+    font-size: 200%;
+    padding: 5%;
+}
+
+.input-control {
+    border: none;
+    width: 40%;
+    text-align: center;
+    font-size: 200%;
+    padding: 1%;
+}
+
+.precio-producto-und {
+    width: 15%;
+}
+
+.prec-prec {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.precio-producto {
+    margin-right: 4%;
+}
+
+/* Lado derecho, total de la compra, boton finilizar compra y seguir comprando */
+
+.lado-derecho {
+    width: 30%;
+    margin-right: 2%;
+}
+
+.total-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.664);
+    padding: 6% 2%;
+    box-shadow: 2px 2px 20px rgb(132, 132, 132);
+}
+
+.total {
+    font-size: 300%;
+    color: black;
+    margin-bottom: 4%;
+    text-align: center;
+}
+
+.btn-comprar {
+    width: 80%;
+    background-color: var(--color-principal);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3% 0%;
+    margin-bottom: 2%;
+    border-radius: 20px;
+    box-shadow: 1px 1px 7px rgb(186, 186, 186);
+}
+
+.btn-comprar button {
+    color: white;
+    font-size: 150%;
+}
+
+.btn-continuar-comprando {
+    padding: 3% 0%;
+
+    border: var(--border-dospx);
+    width: 80%;
+    border-radius: 20px;
+    box-shadow: 1px 1px 7px rgb(186, 186, 186);
+}
+
+.btn-continuar-comprando a {
+    color: var(--color-principal);
+    padding: 3% 0%;
+    font-size: 150%;
+}
+
+/* Carrito cuando está vacío */
+
+.carrito-vacio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.664);
+    padding: 3%;
+    margin: 0% 15%;
+    color: black;
+    box-shadow: 2px 2px 20px rgba(101, 101, 101, 0.5);
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+.titulo-carrito-vacio {
+    font-size: 200%;
+    margin: 0% 0% 2% 2%;
+}
+
+.desc-carrito-vacio {
+    font-size: 150%;
+    margin-bottom: 3%;
+}
+
+.btn-carrito-vacio {
+    width: 40%;
+    padding: 2%;
+    background-color: var(--color-principal);
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px rgb(186, 186, 186);
+}
+
+.btn-carrito-vacio a {
+    color: white;
+    font-size: 180%;
+}
+
+/* Medias queries */
+
+@media screen and (max-width: 1281px) {
+    /* Lado izquierdo, productos seleccionados */
+
+    .nom-dec-eliminar {
+        width: 60%;
+    }
+
+    .input-control {
+        font-size: 180%;
+    }
+
+    .precio-producto {
+        font-size: 150%;
+    }
+
+    /* Lado derecho, total de la compra, boton finilizar compra y seguir comprando */
+
+    .total {
+        font-size: 200%;
+    }
+
+    .btn-comprar button {
+        font-size: 120%;
+    }
+
+    .btn-continuar-comprando a {
+        font-size: 120%;
+    }
+
+    /* Carrito cuando está vacío */
+
+    .titulo-carrito-vacio {
+        font-size: 150%;
+    }
+
+    .desc-carrito-vacio {
+        font-size: 130%;
+    }
+}
+
+@media screen and (max-width: 951px) {
+    .carrito-container {
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Lado izquierdo, productos seleccionados */
+
+    .controles-productos {
+        padding: 0%;
+    }
+
+    .precio-producto {
+        display: none;
+    }
+
+    .shop-producto {
+        width: 100%;
+    }
+
+    /* Lado derecho, total de la compra, boton finilizar compra y seguir comprando */
+
+    .lado-derecho {
+        width: 80%;
+    }
+
+    .total {
+        font-size: 300%;
+    }
+}
+
+@media screen and (max-width: 845px) {
+    /* Carrito cuando está vacío */
+
+    .titulo-carrito-vacio {
+        font-size: 120%;
+    }
+
+    .desc-carrito-vacio {
+        font-size: 110%;
+    }
+
+    .btn-carrito-vacio a {
+        font-size: 150%;
+    }
+}
+
+@media screen and (max-width: 562px) {
+    .prod-selec-shop {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    /* Lado izquierdo, productos seleccionados */
+
+    .btn-eliminar {
+        font-size: 100%;
+    }
+
+    .prod-selec-shop img {
+        width: 20%;
+    }
+    .nom-dec-eliminar {
+        width: 75%;
+    }
+
+    .controles-productos {
+        width: 40%;
+        padding: 1% 2%;
+        margin-left: 5%;
+    }
+
+    .ctrl-btns {
+        padding: 5%;
+    }
+    .precio-producto-und {
+        width: 30%;
+    }
+
+    /* Lado derecho, total de la compra, boton finilizar compra y seguir comprando */
+
+    .total {
+        font-size: 200%;
+    }
+
+    .btn-comprar button {
+        font-size: 100%;
+    }
+
+    .btn-continuar-comprando a {
+        font-size: 100%;
+    }
+}
+

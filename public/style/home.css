@@ -1,0 +1,281 @@
+/* HERO */
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagen-hero {
+    width: 100%;
+    position: relative;
+}
+
+.hero {
+    position: absolute;
+    top: 35%;
+}
+
+.texto-hero{
+    font-size: 900%;
+    color: var(--color-fondo-nav);
+    font-family: "Great Vibes";
+    font-weight: 600;
+    text-align: center;
+    line-height: 90%;
+    text-shadow: 1px 1px 10px black;
+}
+
+.botones-hero{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.btns-hero{
+    padding: 2% 4%;
+    border: var(--border-dospx);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 2px 2px 10px black,
+    -2px -2px 10px black;
+    margin-right: 3%;
+}
+
+
+.a-btn-hero{
+    color: var(--color-fondo-nav);
+    font-size: 150%;
+    font-family: var(--fuente-secundaria);
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 1px black;
+}
+
+
+.sobre-nosotros{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 5%;
+    font-family: var(--fuente-secundaria);
+}
+
+.sobre-nosostros-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+}
+
+
+.imagen-sobre-nosotros{
+    width: 40%;
+    border-radius: 20px;
+}
+
+.img-sn{
+    width: 90%;
+    border-radius: 20px;
+    border: var(--border-dospx);
+    box-shadow: 2px 2px 10px rgb(117, 117, 117);
+}
+
+.sobre-nosostros{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10%;
+}
+
+.sobre-nosostros-containers{
+    margin: 5% 0%;
+}
+
+.titulo-sobre-nosotros{
+    font-size: 250%;
+    font-weight: 900;
+    text-shadow: 2px 2px 10px rgb(206, 206, 206);
+    margin: 0% 0% 3% 3%;
+}
+
+.parrafo-sobre-nosotros{
+    font-size: 150%;
+    text-align: start;
+    color: black;
+}
+
+.seccion-btn-visitanos{
+    display: flex;
+    justify-content: center;
+    margin: 0% 5% 8% 5%;
+}
+
+.btn-visitanos{
+    padding: 1% 2%;
+    border: var(--border-dospx);
+    border-radius: 20px;
+    font-size: 200%;
+    font-family: var(--fuente-secundaria);
+    font-weight: 800;
+    box-shadow: 2px 2px 10px rgb(216, 216, 216),
+    -2px -2px 10px rgb(216, 216, 216);
+    background-color: var(--color-fondo-nav);
+}
+
+.btn-visitanos:hover{
+transform: scale(110%);
+
+
+}
+
+.btn-visitanos a{
+    color: var(--color-principal);
+}
+
+
+/* Medias queries */
+
+@media screen and (max-width: 1441px) {
+    
+    .hero {
+        top: 20%;
+    }
+
+    .sobre-nosostros-container{
+        width: 80%;
+    }
+
+    .imagen-sobre-nosotros{
+        width: 50%;
+    }
+
+    .titulo-sobre-nosotros{
+        font-size: 200%;
+    }
+
+    .parrafo-sobre-nosotros{
+        font-size: 150%;
+    }
+
+    .btn-visitanos{
+        font-size: 170%;
+    }
+    
+}
+
+
+
+@media screen and (max-width: 1041px) {
+
+    .hero {
+        top: 13%;
+    }
+
+    .texto-hero{
+        font-size: 700%;
+    }
+
+    .a-btn-hero{
+        font-size: 130%;
+    }
+
+    .titulo-sobre-nosotros{
+        font-size: 160%;
+    }
+
+    .parrafo-sobre-nosotros{
+        font-size: 120%;
+    }
+
+    .btn-visitanos{
+        font-size: 150%;
+    }
+}
+
+@media screen and (max-width: 951px) {
+
+    .hero {
+        top: 12%;
+    }
+
+    .texto-hero{
+        font-size: 500%;
+    }
+
+    .a-btn-hero{
+        font-size: 100%;
+    }
+
+    .btn-visitanos{
+        font-size: 130%;
+    }
+
+}
+
+
+
+@media screen and (max-width: 562px) {
+    .btns-hero{
+        padding: 1% 2%;
+    }
+
+    .a-btn-hero{
+        font-size: 100%;
+    }
+
+    .sobre-nosostros-container{
+        width: 90%;
+    }
+
+    .titulo-sobre-nosotros{
+        font-size: 130%;
+    }
+
+    .parrafo-sobre-nosotros{
+        font-size: 100%;
+    }
+
+
+}
+
+
+@media screen and (max-width: 391px) {
+
+    .hero {
+        top: 7%;
+    }
+
+    .texto-hero{
+        font-size: 250%;
+    }
+
+    .a-btn-hero{
+        font-size: 80%;
+    }
+
+    .sobre-nosostros{
+        width: 100%;
+    }
+
+    .sobre-nosostros-containers{
+        text-align: center;
+    }
+
+    .imagen-sobre-nosotros{
+        display: none;
+    }
+
+    .parrafo-sobre-nosotros{
+        text-align: center;
+    }
+
+    .btn-visitanos{
+        font-size: 100%;
+    }
+}

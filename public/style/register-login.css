@@ -1,0 +1,160 @@
+/* REGISTRO Y LOGIN DE USUARIOS  */
+
+.reg-log-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-image: url(../image/patronPan.svg);
+    background-size: contain;
+    font-family: var(--fuente-secundaria);
+}
+
+.reg-log-form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 50%;
+    padding: 2% 4%;
+    border: 2px solid var(--color-principal);
+    border-radius: 20px;
+    backdrop-filter: blur(30px);
+    box-shadow: 2px 2px 20px rgb(188, 188, 188);
+    margin: 3%;
+}
+
+.titulo-form {
+
+    font-size: 350%;
+    margin: 1% 0% 2% 0%;
+    text-align: center;
+}
+
+
+
+.reg-log-form label {
+    font-size: 150%;
+    font-weight: 600;
+    margin: 0% 0% 1% 3%;
+}
+
+.reg-log-form input {
+    margin-bottom: 3%;
+    padding: 2.7%;
+    border: 2px solid var(--color-principal);
+    border-radius: 20px;
+    font-size: 100%;
+    box-shadow: var(--box-shadow);
+}
+
+input::placeholder {
+    font-family: var(--fuente-secundaria);
+    font-size: 120%;
+    color: var(--color-principal);
+}
+
+.abajo-form-reg-log {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2% 0%;
+    width: 100%;
+}
+
+.btn-reg-log {
+    width: 30%;
+    padding: 2% 4%;
+    border: 2px solid var(--color-principal);
+    border-radius: 20px;
+    font-size: 140%;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--color-principal);
+    background-color: var(--color-fondo-nav);
+    box-shadow: var(--box-shadow);
+}
+
+.ini-reg {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3%;
+    width: 100%;
+    margin-top: 3%;
+    font-size: 150%;
+    font-family: var(--fuente-secundaria);
+}
+
+.ini-reg button {
+    border: 1.5px solid var(--color-principal);
+    border-radius: 20px;
+    padding: 1% 3%;
+    box-shadow: var(--box-shadow);
+    background-color: var(--color-fondo-nav);
+}
+
+.ini-reg button a {
+    color: var(--color-principal);
+    font-weight: 600;
+    font-size: 150%;
+    font-family: var(--fuente-secundaria);
+}
+
+
+/* Medias queries */
+
+
+@media screen and (max-width: 1281px) {
+
+    .reg-log-section {
+        padding: 2%;
+    }
+
+    .reg-log-form {
+        width: 70%;
+    }
+}
+
+
+@media screen and (max-width: 951px) {
+    .reg-log-form {
+        width: 85%;
+    }
+
+    .titulo-form {
+        font-size: 300%;
+    }
+}
+
+
+@media screen and (max-width: 562px) {
+
+    .titulo-form {
+        font-size: 200%;
+    }
+
+    .reg-log-form label {
+        font-size: 120%;
+    }
+
+    input::placeholder {
+        font-size: 100%;
+    }
+
+
+    .btn-reg-log {
+        width: 50%;
+        font-size: 110%;
+    }
+
+    .ini-reg {
+        font-size: 100%;
+    }
+
+    .ini-reg button a {
+        font-size: 100%;
+    }
+}

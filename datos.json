@@ -1,0 +1,85 @@
+
+
+
+
+[
+    {
+        "nombre": "Croissant",
+        "descripcion": "Masa hojaldrada elaborada con manteca. Textura crujiente y hojaldrada en el exterior y suave por dentro.",
+        "precio": 500,
+        "imagen": "croissant.png",
+        "categoria": "Panificado"
+    },
+
+    {
+        "nombre": "Pan Ciabatta",
+        "descripcion": "Pan italiano clásico gran panal de miga y corteza generalmente crujiente.",
+        "precio": 200,
+        "imagen": "ciabatta.png",
+        "categoria": "Panificado"
+    },
+
+    {
+        "nombre": "Pan de molde",
+        "descripcion": "Clásico pan de molde lactal.",
+        "precio": 450,
+        "imagen": "panmolde.png",
+        "categoria": "Panificado"
+    },
+
+    {
+        "nombre": "Vigilante",
+        "descripcion": "Palito de masa dulce que lleva almíbar, crema pastelera y membrillo en su superficie.",
+        "precio": 120,
+        "imagen": "vigilante.png",
+        "categoria": "Panificado"
+    },
+
+    {
+        "nombre": "Muffin",
+        "descripcion": "Relleno de arándanos",
+        "precio": 70,
+        "imagen": "muffin.png",
+        "categoria": "Pastelería"
+    },
+
+    {
+        "nombre": "Torta chocolate porción",
+        "descripcion": "Torta húmeda de chocolate, rellena de mousse de chocolate y dulce de leche, cubierta de frutos secos previamente tostados.",
+        "precio": 90,
+        "imagen": "tortachoco.png",
+        "categoria": "Pastelería"
+    },
+
+    {
+        "nombre": "Macarons",
+        "descripcion": "Dos galletas redondas hechas de almendras molidas, azúcar glas y claras de huevo, unidas por un relleno cremoso en el centro.",
+        "precio": 55,
+        "imagen": "macarons.png",
+        "categoria": "Pastelería"
+    },
+
+    {
+        "nombre": "Torta tiramisú y chocolate porción",
+        "descripcion": "Base de bizcochuelo de chocolate, relleno de tiramisú, crema batida con café y dulce de leche, cubierta de cacao en polvo y chips de chocolate.",
+        "precio": 110,
+        "imagen": "tortatiramisu.png",
+        "categoria": "Pastelería"
+    },
+
+    {
+        "nombre": "Scon de queso x 100grs.",
+        "descripcion": "Panecillo individual de forma redonda con agregado de queso mozzarella y reggianito.",
+        "precio": 150,
+        "imagen": "scon.png",
+        "categoria": "Salado"
+    },
+
+    {
+        "nombre": "Sandwich pan bagel x unidad",
+        "descripcion": "Pan redondo, con un agujero en el medio y salado. Relleno de tomate cherry, queso parmesano y lechuga.",
+        "precio": 60,
+        "imagen": "bagel.png",
+        "categoria": "Salado"
+    }
+]

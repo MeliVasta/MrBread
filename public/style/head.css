@@ -1,0 +1,235 @@
+/* BARRA NAVEGACION */
+
+header {
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+    background-color: var(--color-fondo-nav);
+    color: var(--color-principal);
+    padding: 0.5%;
+    border-bottom: 0.5px solid var(--color-principal);
+    box-shadow: 1px 0px 20px rgba(167, 167, 167, 0.5);
+}
+
+.barra-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0.4% 2%;
+    width: 100%;
+}
+
+.user {
+    width: 25%;
+}
+
+.btns-user {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2%;
+}
+
+.usuario-registrado {
+    font-size: 200%;
+    font-family: var(--fuente-secundaria);
+}
+
+.btns-reg-log {
+    padding: 3% 6%;
+    border: 0.5px solid var(--color-principal);
+    border-radius: 20px;
+}
+
+.btns-reg-log a {
+    font-family: var(--fuente-secundaria);
+    color: var(--color-principal);
+    font-size: 150%;
+}
+
+.btns-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+}
+
+.btns-pages {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 2%;
+    width: 80%;
+}
+
+.btn-pages {
+    font-family: var(--fuente-secundaria);
+    font-weight: 700;
+    font-size: 150%;
+}
+
+.btn-pages a {
+    color: var(--color-principal);
+}
+
+.btn-pages button a i {
+    font-size: 300%;
+    transform: scaleY(1);
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 30%;
+}
+
+.logo h1 {
+    font-family: var(--fuente-principal);
+    font-size: 370%;
+}
+
+.logo img {
+    width: 15%;
+}
+
+/* Medias queries */
+
+@media screen and (max-width: 1441px) {
+    
+    .btn-pages {
+        font-size: 110%;
+    }
+
+    .btns-reg-log a {
+        font-size: 130%;
+    }
+
+    .logo h1 {
+        font-size: 300%;
+    }
+
+    .logo img {
+        width: 20%;
+    }
+}
+
+@media screen and (max-width: 1367px) {
+    .logo h1 {
+        font-size: 250%;
+    }
+}
+
+@media screen and (max-width: 1281px) {
+    .btns-pages {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 1041px) {
+    .barra-nav{
+        padding: 0.4% 1%;
+    }
+
+    .user {
+        width: 20%;
+    }
+
+    .usuario-registrado {
+        font-size: 100%;
+    }
+
+    .btns-reg-log a {
+        font-size: 100%;
+    }
+
+    .btn-pages {
+        font-size: 95%;
+        gap: 1%;
+    }
+
+    .logo h1 {
+        font-size: 200%;
+    }
+}
+
+@media screen and (max-width: 951px) {
+
+    .btn-pages {
+        font-size: 90%;
+    }
+
+    .btn-pages button a i {
+        font-size: 250%;
+    }
+}
+
+@media screen and (max-width: 845px) {
+
+    .usuario-registrado {
+        font-size: 90%;
+    }
+
+    .btns-reg-log a {
+        font-size: 90%;
+    }
+
+    .btn-pages {
+        font-size: 80%;
+    }
+
+    .logo {
+        width: 25%;
+    }
+    
+    .logo h1 {
+        font-size: 150%;
+    }
+}
+
+@media screen and (max-width: 562px) {
+
+    .barra-nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1%;
+    }
+
+    .logo{
+        display: none;
+    }
+
+    .user {
+        width: 30%;
+    }
+
+    .usuario-registrado {
+        font-size: 70%;
+    }
+
+    .btns-reg-log a {
+        font-size: 70%;
+    }
+
+    .btns-pages {
+        width: 100%;
+    }
+
+    .btn-pages a {
+        font-size: 70%;
+    }
+
+}
+
+@media screen and (max-width: 391px) {
+    .btn-pages a {
+        font-size: 60%;
+    }
+}

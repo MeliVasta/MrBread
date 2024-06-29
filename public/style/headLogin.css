@@ -1,0 +1,53 @@
+/* BARRA NAVEGACION LOGIN/REGISTER */
+
+.header-login{
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+}
+
+
+.logo-login {
+    background-color: var(--color-fondo-nav);
+    color: var(--color-principal);
+}
+
+
+.home-nav-login{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-principal);
+}
+
+.home-nav-login .titulo-nav-login {
+    font-family: var(--fuente-principal);
+    font-size: 500%;
+    text-shadow: 2px 1px 10px rgb(221, 221, 221);
+}
+
+.home-nav-login img {
+    width: 5%;
+}
+
+
+
+/* Medias queries */
+
+@media screen and (max-width: 1281px) {
+    .home-nav-login .titulo-nav-login {
+        font-size: 400%;
+    }
+
+    .home-nav-login img {
+        width: 10%;
+    }
+}
+
+
+@media screen and (max-width: 562px) {
+    .home-nav-login .titulo-nav-login {
+        font-size: 270%;
+    }
+}

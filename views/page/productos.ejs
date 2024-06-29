@@ -1,0 +1,155 @@
+<%- include ('../partials/head.ejs') %>
+
+    <section class="secciones">
+        <h2 class="titulo-secciones">NUESTROS PRODUCTOS</h2>
+
+
+        <!-- Botónes por categoría -->
+
+        <div class="btn-categorias-productos">
+            <div class="categorias">
+                <button class="por-categorias">
+                    <a href="./all">
+                        <img src="../image/todosProd.svg" alt="" class="imagen-categoria">
+                        <span>TODOS</span>
+                    </a>
+                </button>
+            </div>
+
+            <div class="categorias">
+                <button class="por-categorias">
+                    <a href="./salado">
+                        <img src="../image/salado.svg" alt="" class="imagen-categoria">
+                        <span>SALADO</span>
+                    </a>
+                </button>
+            </div>
+
+            <div class="categorias">
+                <button class="por-categorias">
+                    <a href="./pasteleria">
+                        <img src="../image/pasteleria.svg" alt="" class="imagen-categoria">
+                        <span>PASTELERIA</span>
+                    </a>
+                </button>
+            </div>
+
+            <div class="categorias">
+                <button class="por-categorias">
+                    <a href="./panificado">
+                        <img src="../image/panificado.svg" alt="" class="imagen-categoria">
+                        <span>PANIFICADO</span>
+                    </a>
+                </button>
+            </div>
+        </div>
+
+
+        <!-- Barra divisora -->
+
+        <div class="barra-divisora">
+            <img src="../image/patronPan.svg" alt="">
+        </div>
+
+
+        <!-- Barra de búsqueda -->
+
+        <div class="barra-busqueda">
+            <form action="/productos/buscar" method="GET" class="form-productos">
+                <input type="text" name="q" placeholder="Buscar producto o ingrediente favorito...">
+                <button type="submit"><i class="bi bi-search"></i></button>
+            </form>
+        </div>
+
+
+        <!-- Productos -->
+
+        <div class="productos-container">
+            <% if (resultados && resultados.length> 0) { %>
+
+                <!-- Mostrar resultados de búsqueda -->
+                <h4 class="titulo-resultado">RESULTADOS DE LA BÚSQUEDA: " <%= busqueda%> " </h2>
+                        <div class="productos">
+                            <% resultados.forEach(producto=> { %>
+                                <div class="card-productos">
+
+                                    <img src="/image/<%= producto.imagen %>" alt="" />
+
+                                    <div class="detalle-producto">
+
+                                        <h4 class="titulo-producto">
+                                            <%= producto.nombre %>
+                                        </h4>
+
+                                        <div class="det-pre-producto">
+                                            <div class="det-precio-producto">
+                                                <p class="descripcion-producto">
+                                                    <%= producto.descripcion %>
+                                                </p>
+                                                <p class="precio-producto">
+                                                    <i class="bi bi-coin"></i>
+                                                    $<%= producto.precio %>
+                                                </p>
+                                            </div>
+                                            <button class="btn-agg-carrito">
+                                                <a href="/productos/shop/<%= producto.id %>">
+                                                    <i class="bi bi-plus"></i>
+                                                </a>
+                                            </button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <% }) %>
+                        </div>
+                        <% } else if (busqueda !=='' ) { %>
+
+                            <!-- Mostrar mensaje de no resultados -->
+                             
+                            <div class="no-resultados">
+                                <p>NO SE ENCONTRARON RESULTADOS PARA " <%= busqueda %> "</p>
+                            </div>
+                            <% } else { %>
+
+                                <!-- Mostrar todos los productos -->
+
+                                <div class="productos">
+                                    <% productos.forEach(producto=> { %>
+                                        <div class="card-productos">
+                                            <img src="/image/<%= producto.imagen %>" alt="" />
+
+                                            <div class="detalle-producto">
+                                                <h4 class="titulo-producto">
+                                                    <%= producto.nombre %>
+                                                </h4>
+                                                <div class="det-pre-producto">
+                                                    <div class="det-precio-producto">
+                                                        <p class="descripcion-producto">
+                                                            <%= producto.descripcion %>
+                                                        </p>
+                                                        <p class="precio-producto">
+                                                            <i class="bi bi-coin"></i>
+                                                            $<%= producto.precio %>
+                                                        </p>
+                                                    </div>
+                                                    <button class="btn-agg-carrito">
+                                                        <strong>
+                                                            <a href="/productos/shop/<%= producto.id %>">
+                                                                <i class="bi bi-plus"></i>
+                                                            </a>
+                                                        </strong>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <% }) %>
+                                </div>
+                                <% } %>
+        </div>
+
+    </section>
+
+
+
+
+    <%- include ('../partials/footer.ejs') %>

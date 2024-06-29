@@ -1,0 +1,36 @@
+<%- include ('../partials/head.ejs') %>
+
+    <section class="secciones">
+        <div class="barra-divisora">
+            <img src="../image/patronPan.svg" alt="">
+        </div>
+        <h2 class="titulo-secciones">CONTACTANOS</h2>
+
+        <div class="form-contacto">
+            <form action="" class="formulario-contacto">
+                <label for="name" class="label-contacto">NOMBRE:</label>
+                <input type="text" name="name" placeholder="Ingrese su nombre" required class="inputs-contacto">
+
+                <label for="email" class="label-contacto">EMAIL:</label>
+                <input type="email" name="email" placeholder="Ingrese su email de contacto" required
+                    class="inputs-contacto">
+
+                <label for="message" class="label-contacto">MENSAJE:</label>
+                <textarea name="message" rows="4" placeholder="Ingrese su mensaje" class="inputs-contacto"></textarea>
+
+                <div class="sec-btn-contacto">
+                    <button class="btn-contacto">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+    <%- include ('../partials/footer.ejs') %>

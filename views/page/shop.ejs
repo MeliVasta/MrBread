@@ -1,0 +1,94 @@
+<%- include ('../partials/head.ejs') %>
+
+    <section class="secciones">
+
+        <div class="barra-divisora">
+            <img src="../image/patronPan.svg" alt="">
+        </div>
+
+        <h2 class="titulo-secciones">MI CARRITO</h2>
+        <div class="carrito-container">
+
+            <!-- Mostrar el carrito vacío si no hay productos -->
+            <% if (carrito.length===0) { %>
+                <div class="carrito-vacio">
+                    <h5 class="titulo-carrito-vacio">El carrito de compras está vacío 😞</h5>
+                    <p class="desc-carrito-vacio">✨ ¡Hace click en el botón y agregué sus productos favoritos! ✨</p>
+                    <button class="btn-carrito-vacio">
+                        <a href="/productos/all">ELIGIR PRODUCTO</a>
+                    </button>
+                </div>
+                <% } else { %>
+                    <!-- Lado izquierdo, productos seleccionados -->
+                    <div class="shop-producto">
+                        <div class="shop-producto-container">
+                            <% carrito.forEach(producto=> { %>
+                                <!-- Producto seleccionado-->
+                                <div class="prod-selec-shop">
+
+                                    <img src="/image/<%= producto.imagen %>" alt="" />
+
+                                    <div class="nom-dec-eliminar">
+                                        <h4 class="titulo-producto">
+                                            <%= producto.nombre %>
+                                        </h4>
+                                        <p class="descripcion-producto">
+                                            <%= producto.descripcion %>
+                                        </p>
+
+                                        <form action="/productos/<%= producto._id %>/eliminar" method="POST">
+                                            <button type="submit"
+                                                class="btn-eliminar"><strong>Eliminar</strong></button>
+                                        </form>
+                                    </div>
+
+                                    <!-- Controles para modificar la cantidad de productos seleccionados -->
+
+                                    <div class="controles-productos">
+                                        <div class="ctrl-btns">
+                                            <form action="/productos/<%= producto._id %>/restar" method="POST">
+                                                <button class="btn-control" type="submit" <% if (producto.cantidad===1)
+                                                    { %>disabled<% } %>>-</button>
+                                            </form>
+
+                                            <input type="text" class="input-control" value="<%= producto.cantidad %>"
+                                                readonly />
+
+                                            <form action="/productos/<%= producto._id %>/sumar" method="POST">
+                                                <button class="btn-control" type="submit">+</button>
+                                            </form>
+                                        </div>
+                                    </div>
+
+                                    <!-- Precio por unidad de producto -->
+                                    <div class="precio-producto-und">
+                                        <div class="prec-prec">
+                                            <p>Precio por producto:</p>
+                                            <p class="precio-producto">$ <%= producto.precio %>
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <% }) %>
+                        </div>
+                    </div>
+
+                    <!-- Lado derecho, total de la compra, boton finilizar compra y seguir comprando -->
+                    <div class="lado-derecho">
+                        <div class="total-container">
+                            <p class="total">TOTAL: <strong>$ <%= total %></strong></p>
+                            <form action="/productos/comprar" method="POST" class="btn-comprar">
+                                <button type="submit">FINALIZAR COMPRA</button>
+                            </form>
+
+                            <button class="btn-continuar-comprando">
+                                <a href="/productos/all">CONTINUAR COMPRANDO</a>
+                            </button>
+                        </div>
+                    </div>
+                    <% } %>
+        </div>
+    </section>
+
+    <%- include ('../partials/footer.ejs') %>
